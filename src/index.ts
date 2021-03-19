@@ -1,21 +1,14 @@
-// ------------------------------------------------------------------------------
-//  Copyright (c) 2018 Koreez LLC. All Rights Reserved.
-//
-//  NOTICE: You are permitted to use, modify, and distribute this file
-//  in accordance with the terms of the license agreement accompanying it.
-// ------------------------------------------------------------------------------
-
 /**
  * NinePatchPlugin
  */
-export { NinePatchPlugin } from "./com/koreez/plugin/NinePatchPlugin";
+export { NinePatchPlugin } from "./plugin/NinePatchPlugin";
 
-export { INinePatchCreator } from "./com/koreez/plugin/ninepatch/INinePatchCreator";
+export { INinePatchCreator } from "./plugin/ninepatch/INinePatchCreator";
 
-export { INinePatchFactory } from "./com/koreez/plugin/ninepatch/INinePatchFactory";
+export { INinePatchFactory } from "./plugin/ninepatch/INinePatchFactory";
 
-export { INinePatchConfig } from "./com/koreez/plugin/ninepatch/INinePatchConfig";
+export { INinePatchConfig } from "./plugin/ninepatch/INinePatchConfig";
 
-export { IPatchesConfig } from "./com/koreez/plugin/ninepatch/IPatchesConfig";
+export { IPatchesConfig } from "./plugin/ninepatch/IPatchesConfig";
 
-export { NinePatch } from "./com/koreez/plugin/ninepatch/NinePatch";
+export { NinePatch } from "./plugin/ninepatch/NinePatch";

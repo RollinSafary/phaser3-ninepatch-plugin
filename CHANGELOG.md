@@ -1,5 +1,9 @@
 # Phaser3 Nine Patch Changelog:
 
+## v2.0.3
+
+- Now NinePatch extends from `Phaser.GameObjects.Container` and implements `Phaser.GameObjects.Components.Texture` and uses `Phaser.GameObjects.Components.Texture` (public) properties in place of custom (private) properties.
+
 ## Phaser3 Nine Patch 2.0.0
 
 ### v2.0.1

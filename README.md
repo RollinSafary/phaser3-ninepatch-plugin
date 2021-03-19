@@ -1,22 +1,18 @@
 # Phaser3 Nine Patch
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/koreezgames/phaser3-ninepatch-plugin/blob/master/LICENSE)
-[![Build Status](https://secure.travis-ci.org/koreezgames/phaser3-ninepatch-plugin.svg?branch=master)](https://travis-ci.org/koreezgames/phaser3-ninepatch-plugin)
-[![codebeat badge](https://codebeat.co/badges/e3792494-1875-4826-be00-2124148b9287)](https://codebeat.co/projects/github-com-koreezgames-phaser3-ninepatch-plugin-master)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/63e0c72189fa97ca55db/test_coverage)](https://codeclimate.com/github/koreezgames/phaser3-ninepatch-plugin/test_coverage)
-[![npm version](https://badge.fury.io/js/%40koreez%2Fphaser3-ninepatch.svg)](https://badge.fury.io/js/%40koreez%2Fphaser3-ninepatch)
-[![Greenkeeper badge](https://badges.greenkeeper.io/koreezgames/phaser3-ninepatch-plugin.svg)](https://greenkeeper.io/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/rollinsafary/phaser3-ninepatch-plugin/blob/master/LICENSE)
+[![npm version](https://badge.fury.io/js/%40rollinsafary%2Fphaser3-ninepatch.svg)](https://badge.fury.io/js/%40rollinsafary%2Fphaser3-ninepatch)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 Phaser3 Nine Patch plugin adds 9-slice scaling support to Phaser3!
 
 #### Resizing with nine patch
 
-![Nine Patch ](https://raw.githubusercontent.com/koreezgames/phaser3-ninepatch-plugin/master/assets/np.gif)
+![Nine Patch ](https://raw.githubusercontent.com/rollinsafary/phaser3-ninepatch-plugin/master/assets/np.gif)
 
 #### Resizing without nine patch
 
-![Not Nine Patch](https://raw.githubusercontent.com/koreezgames/phaser3-ninepatch-plugin/master/assets/nnp.gif)
+![Not Nine Patch](https://raw.githubusercontent.com/rollinsafary/phaser3-ninepatch-plugin/master/assets/nnp.gif)
 
 Key features:
 
@@ -30,16 +26,16 @@ A **Nine-Patch** is an image format that uses extra information, defining what p
 
 Using this technique, you can define the background of multiples UI components like panels or buttons with the same image asset. You can also create large panels with a reduced image asset so is very useful for optimizing your project resources.
 
-![Phaser3 Nine Patch](https://raw.githubusercontent.com/koreezgames/phaser3-ninepatch-plugin/master/assets/what-is-nine-patch.png)
+![Phaser3 Nine Patch](https://raw.githubusercontent.com/rollinsafary/phaser3-ninepatch-plugin/master/assets/what-is-nine-patch.png)
 
 ## Getting Started
 
 First you want to get a fresh copy of the plugin. You can get it from this repo or from npm, ain't that handy.
 
-[![npm](https://img.shields.io/npm/dt/@koreez/phaser3-ninepatch.svg)](https://www.npmjs.com/package/@koreez/phaser3-ninepatch)
+[![npm](https://img.shields.io/npm/dt/@rollinsafary/phaser3-ninepatch.svg)](https://www.npmjs.com/package/@rollinsafary/phaser3-ninepatch)
 
 ```
-npm install @koreez/phaser3-ninepatch --save
+npm install @rollinsafary/phaser3-ninepatch --save
 ```
 
 ## Usage
@@ -148,9 +144,10 @@ ninePatch.resize(100, 200);
 ```
 
 ## Credits
+This repo forked from https://github.com/koreezgames/phaser3-ninepatch-plugin
+<br> Big thanks to these great repos:
 
-Big thanks to this great repo:
-
+https://github.com/koreezgames/phaser3-ninepatch-plugin
 https://github.com/orange-games/phaser-nineslice
 
 ## License

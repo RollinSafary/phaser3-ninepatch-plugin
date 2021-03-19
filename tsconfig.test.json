@@ -1,8 +1,0 @@
-{
-    "extends": "./tsconfig.json",
-    "compilerOptions": {
-        "outDir": "lib-test"
-    },
-    "include": ["./src/**/*.ts", "./test/**/*.ts"],
-    "files": ["./types/phaser.d.ts"]
-}
