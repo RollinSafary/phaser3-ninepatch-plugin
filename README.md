@@ -1,7 +1,7 @@
 # Phaser3 Nine Patch
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/rollinsafary/phaser3-ninepatch-plugin/blob/master/LICENSE)
-[![npm version](https://badge.fury.io/js/%40rollinsafary%2Fphaser3-ninepatch.svg)](https://badge.fury.io/js/%40rollinsafary%2Fphaser3-ninepatch)
+[![npm version](https://badge.fury.io/js/%40rollinsafary%2Fphaser3-ninepatch-plugin.svg)](https://badge.fury.io/js/%40rollinsafary%2Fphaser3-ninepatch-plugin)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 Phaser3 Nine Patch plugin adds 9-slice scaling support to Phaser3!
@@ -32,10 +32,10 @@ Using this technique, you can define the background of multiples UI components l
 
 First you want to get a fresh copy of the plugin. You can get it from this repo or from npm, ain't that handy.
 
-[![npm](https://img.shields.io/npm/dt/@rollinsafary/phaser3-ninepatch.svg)](https://www.npmjs.com/package/@rollinsafary/phaser3-ninepatch)
+[![npm](https://img.shields.io/npm/dt/@rollinsafary/phaser3-ninepatch-plugin.svg)](https://www.npmjs.com/package/@rollinsafary/phaser3-ninepatch-plugin)
 
 ```
-npm install @rollinsafary/phaser3-ninepatch --save
+npm install @rollinsafary/phaser3-ninepatch-plugin --save
 ```
 
 ## Usage

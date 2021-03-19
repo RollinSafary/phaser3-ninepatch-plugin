@@ -1,5 +1,5 @@
 {
-  "name": "@rollinsafary/phaser3-ninepatch",
+  "name": "@rollinsafary/phaser3-ninepatch-plugin",
   "version": "2.0.3",
   "description": "Phaser3 Nine Patch",
   "main": "lib/index.js",
