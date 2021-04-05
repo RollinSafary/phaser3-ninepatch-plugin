@@ -38,6 +38,7 @@ First you want to get a fresh copy of the plugin. You can get it from this repo 
 npm install @rollinsafary/phaser3-ninepatch-plugin --save
 ```
 
+
 ## Usage
 
 ### Load the plugin
@@ -58,7 +59,25 @@ So, to load the plugin, include it in phaser game config.
   },
 }
 ```
+### Prepare you scene (TypeScript only)
+To have type definitions you have to implement `INinePatchScene` interface in your scenes
+```typescript
+export default class BaseScene extends Phaser.Scene implements INinePatchScene {
+  // your code
+}
+```
+or 
+```typescript
+export default class BaseScene extends Phaser.Scene {
+  public add: INinePatchFactory;
+  public make: INinePatchCreator;
+  public cache: NinePatchCacheManager;
 
+  // your code
+}
+```
+both implementations are same.
+For more information see the 2.0.5 in [CHANGELOG](https://raw.githubusercontent.com/rollinsafary/phaser3-ninepatch-plugin/master/CHANGELOG.md).
 The plugin will patch your Phaser game with additional add/make methods so the NinePatch game object fits up in Phaser like any normal object!
 
 ### Adding a container

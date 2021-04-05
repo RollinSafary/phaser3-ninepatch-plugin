@@ -1,5 +1,25 @@
 # Phaser3 Nine Patch Changelog:
 
+## v2.0.5
+- Added `INinePatchScene` interface which allows to avoid manual override of `factory` and `creator` objects inside scene. Now Phaser.Scene needs just to implement this interface.
+```typescript
+export class MyScene extends Phaser.Scene implements INinepatchScene {...}
+```
+- Added ninePatch custom cache object, which means, that `this.scene.cache.custom.ninePatch` is accessible for you and you have no need to type code like this `(this.scene.cache.custom as any)['ninePatch'].add(...)` to add nine patch asset configs to the cache.
+- Added default ninePatch config. This means, that even if you haven't added/provided nine patch config for the asset, it will take default config
+```javascript
+{
+  left: 0,
+  top: 0,
+  right: 0,
+  bottom: 0,
+}
+```
+- `setTexture` function will change object texture and you can provide different key for it (before you could do that by just using same spritesheet and different frame via `setFrame`). `setFrame` stills there and does what it was doing.
+- Fixed mistake in `package.json` where `webpack.cli` was a main dependency for this package, which caused the editor to show webpack related classes in your import suggestions list.
+
+## v2.0.4
+- `README.md` and `CHANGELOG.md` updated.
 ## v2.0.3
 
 - Now NinePatch extends from `Phaser.GameObjects.Container` and implements `Phaser.GameObjects.Components.Texture` and uses `Phaser.GameObjects.Components.Texture` (public) properties in place of custom (private) properties.

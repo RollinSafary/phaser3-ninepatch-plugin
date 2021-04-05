@@ -1,7 +1,6 @@
 import { IPatchesConfig, normalizePatchesConfig } from "./IPatchesConfig";
 
 export class NinePatch extends Phaser.GameObjects.Container implements Phaser.GameObjects.Components.Texture {
-    private static readonly __BASE: string = "__BASE";
     private static readonly patches: string[] = ["[0][0]", "[1][0]", "[2][0]", "[0][1]", "[1][1]", "[2][1]", "[0][2]", "[1][2]", "[2][2]"];
 
     public texture: Phaser.Textures.Texture;
@@ -22,20 +21,16 @@ export class NinePatch extends Phaser.GameObjects.Container implements Phaser.Ga
         config?: IPatchesConfig
     ) {
         super(scene, x, y);
-        this.config = config || this.scene.cache.custom.ninePatch.get(frame ? `${frame}` : key);
+        this.config = config || this.scene.cache.custom.ninePatch.get(frame ? `${frame}` : key) || { top: 0, left: 0 };
         normalizePatchesConfig(this.config);
         this.setSize(width, height);
         this.setTexture(key, frame);
     }
 
-
-    public resize(width: number, height: number): this {
+    public resize(width: number, height: number, force: boolean = false): this {
         width = Math.round(width);
         height = Math.round(height);
-        if (!this.config) {
-            return this;
-        }
-        if (this.width === width && this.height === height) {
+        if (this.width === width && this.height === height && !force) {
             return this;
         }
         width = Math.max(width, this.config.left + this.config.right);
@@ -47,12 +42,11 @@ export class NinePatch extends Phaser.GameObjects.Container implements Phaser.Ga
 
     public setTexture(key: string, frame?: string | integer): this {
         this.texture = this.scene.textures.get(key);
-        this.setFrame(frame);
-        return this;
+        return this.setFrame(frame);
     }
 
     public setFrame(frame: string | integer): this {
-        this.frame = (this.texture.frames as any)[frame] || (this.texture.frames as any)[NinePatch.__BASE];
+        this.frame = this.scene.textures.getFrame(this.texture.key, frame);
         this.createPatches();
         this.drawPatches();
         return this;
@@ -125,8 +119,7 @@ export class NinePatch extends Phaser.GameObjects.Container implements Phaser.Ga
         let patchIndex: number = 0;
         for (let yi: number = 0; yi < 3; yi++) {
             for (let xi: number = 0; xi < 3; xi++) {
-                // @ts-ignore
-                const patch: Phaser.Textures.Frame = this.texture.frames[this.getPatchNameByIndex(patchIndex)];
+                const patch: Phaser.Textures.Frame = this.scene.textures.getFrame(this.texture.key, this.getPatchNameByIndex(patchIndex));
                 const patchImg = new Phaser.GameObjects.Image(this.scene, 0, 0, patch.texture.key, patch.name);
                 patchImg.setOrigin(0);
                 patchImg.setPosition(this.finalXs[xi] - this.width * this.originX, this.finalYs[yi] - this.height * this.originY);
