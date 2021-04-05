@@ -162,6 +162,19 @@ var ninePatch = this.add.ninePatch(5, 5, 48, 48, "image", null, {
 ninePatch.resize(100, 200);
 ```
 
+### Optimization
+If you don't want to provide nine patch configs each time you're going to create a `NinePatch` game object, so you can just add that config into game cache.
+```typescript
+this.scene.cache.custom.ninePatch.add(keyOrFrameName, configs)
+```
+and then to create a `NinePatch` game object you need just to call
+```
+this.scene.add(x, y, key, frame, width, height)
+```
+and it will retrieve configs from the cache based on the `key` if it's single texture (`frame` is `undefined` or `null`), or based on `frame` name if it's atlas or multi atlas texture.
+
+(Atlas and multi atlas only) <br>
+if you want to avoid situations when there are 2 different atlases that have different frames with the same name, so please set in your `TexturePacker` config to prepend folder name to frame name. This handles that kind of issues in most cases.
 ## Credits
 This repo forked from https://github.com/koreezgames/phaser3-ninepatch-plugin
 <br> Big thanks to these great repos:
