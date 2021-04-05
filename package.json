@@ -1,53 +1,52 @@
 {
-  "name": "@rollinsafary/phaser3-ninepatch-plugin",
-  "version": "2.0.3",
-  "description": "Phaser3 Nine Patch",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
-  "scripts": {
-    "build": "webpack --config config/webpack.config.js --env production --mode production"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com/RollinSafary/phaser3-ninepatch-plugin.git"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
-  "keywords": [
-    "Phaser3",
-    "Phaser",
-    "ninepatch",
-    "nine patch",
-    "nine slice"
-  ],
-  "author": "RollinSafary",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/RollinSafary/phaser3-ninepatch-plugin/issues"
-  },
-  "homepage": "https://github.com/RollinSafary/phaser3-ninepatch-plugin#readme",
-  "dependencies": {
-    "webpack-cli": "^3.0.8"
-  },
-  "peerDependencies": {
-    "phaser": "^3.53.1"
-  },
-  "devDependencies": {
-    "browserify-versionify": "^1.0.6",
-    "case-sensitive-paths-webpack-plugin": "^2.4.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "git-revision-webpack-plugin": "^3.0.6",
-    "html-webpack-plugin": "^3.2.0",
-    "phaser": "^3.53.1",
-    "prettier": "^1.16.4",
-    "ts-loader": "^5.3.3",
-    "tslint": "^5.15.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-loader": "^3.5.4",
-    "typescript": "^4.2.3",
-    "webpack": "^4.14.0",
-    "webpack-dev-server": "^3.11.2",
-    "webpack-merge": "^5.7.3"
-  }
+    "name": "@rollinsafary/phaser3-ninepatch-plugin",
+    "version": "2.0.5",
+    "description": "Phaser3 Nine Patch",
+    "main": "lib/index.js",
+    "typings": "lib/index.d.ts",
+    "scripts": {
+        "build": "webpack --config config/webpack.config.js --env production --mode production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com/RollinSafary/phaser3-ninepatch-plugin.git"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+    },
+    "keywords": [
+        "Phaser3",
+        "Phaser",
+        "ninepatch",
+        "nine patch",
+        "nine slice"
+    ],
+    "author": "RollinSafary",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/RollinSafary/phaser3-ninepatch-plugin/issues"
+    },
+    "homepage": "https://github.com/RollinSafary/phaser3-ninepatch-plugin#readme",
+    "dependencies": {},
+    "peerDependencies": {
+        "phaser": "^3.53.1"
+    },
+    "devDependencies": {
+        "browserify-versionify": "^1.0.6",
+        "case-sensitive-paths-webpack-plugin": "^2.4.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "git-revision-webpack-plugin": "^3.0.6",
+        "html-webpack-plugin": "^3.2.0",
+        "phaser": "^3.53.1",
+        "prettier": "^1.16.4",
+        "ts-loader": "^5.3.3",
+        "tslint": "^5.15.0",
+        "tslint-config-prettier": "^1.18.0",
+        "tslint-loader": "^3.5.4",
+        "typescript": "^4.2.3",
+        "webpack": "^4.14.0",
+        "webpack-cli": "^3.0.8",
+        "webpack-dev-server": "^3.11.2",
+        "webpack-merge": "^5.7.3"
+    }
 }
