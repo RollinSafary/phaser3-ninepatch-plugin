@@ -5,7 +5,7 @@
 1 - Clone your fork of the repository:
 
 ```
-$ git clone https://github.com/koreezgames/phaser3-ninepatch-plugin.git
+$ git clone https://github.com/RollinSafary/phaser3-ninepatch-plugin.git
 ```
 
 2 - Install npm dependencies using yarn:
@@ -45,5 +45,5 @@ $ yarn test
     public interface of the package or it includes significant architecture
     changes.
 
--   Feel free to ask for help from other members of the Koreez team via the
+-   Feel free to ask for help from me via the
     [github issues](https://github.com/RollinSafary/phaser3-ninepatch-plugin/issues).

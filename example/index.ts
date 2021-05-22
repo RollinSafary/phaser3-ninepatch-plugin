@@ -1,13 +1,13 @@
 /// <reference path="../types/phaser.d.ts" />
 
 import "phaser";
-import { NinePatch } from "../src/com/koreez/plugin/ninepatch/NinePatch";
-import { NinePatchPlugin } from "../src/com/koreez/plugin/NinePatchPlugin";
+import { NinePatch } from "../src/plugin/ninepatch/NinePatch";
+import { NinePatchPlugin } from "../src/plugin/NinePatchPlugin";
 
 export default class Game extends Phaser.Game {
     public centerX: number;
     public centerY: number;
-    constructor(config: GameConfig) {
+    constructor(config: Phaser.Types.Core.GameConfig) {
         super(config);
     }
 }
