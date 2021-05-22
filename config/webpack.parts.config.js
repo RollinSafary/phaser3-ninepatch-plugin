@@ -1,10 +1,10 @@
 const webpack = require('webpack')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const GitRevisionPlugin = require('git-revision-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { GitRevisionPlugin } = require('git-revision-webpack-plugin')
 
 exports.cleanup = () => ({
   plugins: [
-    new CleanWebpackPlugin({  verbose: false }),
+    new CleanWebpackPlugin({ verbose: false }),
   ],
 })
 
