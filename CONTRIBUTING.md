@@ -46,4 +46,4 @@ $ yarn test
     changes.
 
 -   Feel free to ask for help from other members of the Koreez team via the
-    [github issues](https://github.com/koreezgames/phaser3-ninepatch-plugin/issues).
+    [github issues](https://github.com/RollinSafary/phaser3-ninepatch-plugin/issues).
