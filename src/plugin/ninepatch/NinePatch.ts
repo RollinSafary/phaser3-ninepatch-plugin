@@ -1,3 +1,5 @@
+import { NinePatchPlugin } from "../NinePatchPlugin";
+import { getNinePatchCacheKey } from "../utils/utils";
 import { IPatchesConfig, normalizePatchesConfig } from "./IPatchesConfig";
 
 export class NinePatch extends Phaser.GameObjects.Container implements Phaser.GameObjects.Components.Texture {
@@ -17,14 +19,16 @@ export class NinePatch extends Phaser.GameObjects.Container implements Phaser.Ga
         width: number,
         height: number,
         key: string,
-        frame?: string | number,
+        frameName?: string | number,
         config?: IPatchesConfig
     ) {
         super(scene, x, y);
-        this.config = config || this.scene.cache.custom.ninePatch.get(frame ? `${frame}` : key) || { top: 0, left: 0 };
+        const cacheKey: string = getNinePatchCacheKey(key, frameName);
+        const frame: Phaser.Textures.Frame = this.scene.textures.getFrame(key, frameName);
+        this.config = config || this.scene.cache.custom[NinePatchPlugin.CACHE_NAME].get(cacheKey) || { top: 0 };
         normalizePatchesConfig(this.config);
-        this.setSize(width, height);
-        this.setTexture(key, frame);
+        this.setSize(width || frame.width, height || frame.height);
+        this.setTexture(key, frameName);
     }
 
     public resize(width: number, height: number, force: boolean = false): this {

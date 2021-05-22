@@ -71,7 +71,6 @@ or
 export default class BaseScene extends Phaser.Scene {
   public add: INinePatchFactory;
   public make: INinePatchCreator;
-  public cache: NinePatchCacheManager;
 
   // your code
 }
@@ -173,8 +172,17 @@ this.scene.add(x, y, key, frame, width, height)
 ```
 and it will retrieve configs from the cache based on the `key` if it's single texture (`frame` is `undefined` or `null`), or based on `frame` name if it's atlas or multi atlas texture.
 
-(Atlas and multi atlas only) <br>
-if you want to avoid situations when there are 2 different atlases that have different frames with the same name, so please set in your `TexturePacker` config to prepend folder name to frame name. This handles that kind of issues in most cases.
+Related to the repeatedly happening issue with atlases and multi atlases added a new static new `addConfigToCache` function to the `NinePatchPlugin` class which will make easier to add config and which will automatically define a key for the asset.
+
+```javascript
+NinePatchPlugin.addConfigToCache(atlasKey, frameName, ninePatchConfig)
+```
+for the single asset provide `null` in place of `frameName`.
+
+```
+NOTE: please avoid of using custom keys for the asset configs
+```
+
 ## Credits
 This repo forked from https://github.com/koreezgames/phaser3-ninepatch-plugin
 <br> Big thanks to these great repos:
