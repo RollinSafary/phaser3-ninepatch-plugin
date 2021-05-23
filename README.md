@@ -55,7 +55,7 @@ So, to load the plugin, include it in phaser game config.
   parent: 'gameContainer',
   scene: [GameScene],
   plugins: {
-    global: [{ key: 'NinePatchPlugin', plugin: NinePatchPlugin, start: true }],
+    global: [{ key: NinePatchPlugin.NAME, plugin: NinePatchPlugin, start: true }],
   },
 }
 ```
@@ -69,8 +69,8 @@ export default class BaseScene extends Phaser.Scene implements INinePatchScene {
 or 
 ```typescript
 export default class BaseScene extends Phaser.Scene {
-  public add: INinePatchFactory;
-  public make: INinePatchCreator;
+  public add: Phaser.GameObjects.GameObjectFactory & INinePatchFactory;
+  public make: Phaser.GameObjects.GameObjectCreator & INinePatchCreator;
 
   // your code
 }

@@ -4,12 +4,13 @@ import { getNinePatchCacheKey } from "./utils/utils";
 
 export class NinePatchPlugin extends Phaser.Plugins.BasePlugin {
     public static NAME: string = "NinePatchPlugin";
+    public static GAME_OBJECT_NAME: string = "ninePatch";
     public static CACHE_NAME: string = "NinePatchCache";
     private static game: Phaser.Game;
 
-    public static addConfigToCache(key: string, frame?: string | number, config?: IPatchesConfig): void {
+    public static addConfigToCache(key: string, frame?: string | number, patchConfig?: IPatchesConfig): void {
         const cacheKey: string = getNinePatchCacheKey(key, frame);
-        this.game.cache.custom[NinePatchPlugin.CACHE_NAME].add(cacheKey, config || { top: 0 });
+        this.game.cache.custom[NinePatchPlugin.CACHE_NAME].add(cacheKey, patchConfig || { top: 0 });
     }
 
     public scene: Phaser.Scene;
@@ -19,7 +20,7 @@ export class NinePatchPlugin extends Phaser.Plugins.BasePlugin {
         pluginManager.game.cache.addCustom(NinePatchPlugin.CACHE_NAME);
 
         //  Register our new Game Object type
-        pluginManager.registerGameObject("ninePatch", this.ninePatchFactory, this.ninePatchCreator);
+        pluginManager.registerGameObject(NinePatchPlugin.GAME_OBJECT_NAME, this.ninePatchFactory, this.ninePatchCreator);
     }
 
     private ninePatchFactory(

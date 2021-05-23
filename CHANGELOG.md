@@ -1,5 +1,20 @@
 # Phaser3 Nine Patch Changelog:
 
+## v2.0.9
+- Modified `INinePatchCreator` and `INinePatchFactory` interfaced not to extend from Phaser base types, to keep type definition readability and avoid some confusing situations related to it.
+- Updated `INinePatchScene` interface based on `creator` and `factory` modifications.
+## v2.0.8
+- Type declaration fixes
+- Added `addConfigToCache` static function to `NinePatchPlugin`, which will generate unique cache key for your asset based on it's `key` and `frame` values, to avoid situations when there are two or more assets in different atlases with same `frameName`. Which was causing wrong configuration issue.
+```javascript
+NinePatchPlugin.addConfigToCache(key, frame, patchConfig)
+```
+## v2.0.7
+- Removed `source-map` from the bundle.
+- The installed bundle is now `minified` and `uglified`! <br>
+*if you're going to read the code, please navigate to our repo*
+## v2.0.6
+- Optimized the package size. The whole repo won't be downloaded when installing the package
 ## v2.0.5
 - Added `INinePatchScene` interface which allows to avoid manual override of `factory` and `creator` objects inside scene. Now Phaser.Scene needs just to implement this interface.
 ```typescript
